@@ -1,0 +1,47 @@
+<h1>🏮 Xuân Bính Ngọ 2026 🏮<br><span style="color: var(--vang); font-size: 1.5rem;">Lì Xì Đại Cát</span></h1>
+
+<div class="grid">
+    <div class="lixi" onclick="openGame(0)"><span class="han">福</span><span class="viet">Phúc</span></div>
+    <div class="lixi" onclick="openGame(1)"><span class="han">祿</span><span class="viet">Lộc</span></div>
+    <div class="lixi" onclick="openGame(2)"><span class="han">壽</span><span class="viet">Thọ</span></div>
+    <div class="lixi" onclick="openGame(3)"><span class="han">智</span><span class="viet">Trí</span></div>
+    <div class="lixi" onclick="openGame(4)"><span class="han">喜</span><span class="viet">Hỷ</span></div>
+    <div class="lixi" onclick="openGame(5)"><span class="han">安</span><span class="viet">An</span></div>
+    <div class="lixi" onclick="openGame(6)"><span class="han">財</span><span class="viet">Tài</span></div>
+    <div class="lixi" onclick="openGame(7)"><span class="han">忍</span><span class="viet">Nhẫn</span></div>
+    <div class="lixi" onclick="openGame(8)"><span class="han">成</span><span class="viet">Thành</span></div>
+</div>
+
+<div id="game-modal" class="overlay">
+    <h2 id="quest-text" style="color: var(--vang); margin-bottom: 10px; text-shadow: 1px 1px #000;">...</h2>
+    <div class="char-box">
+        <span id="char-icon" style="margin-top: -20px;">👤</span>
+        <span id="char-name-label" class="char-name">Ẩn danh</span>
+    </div>
+    <div class="needs-list" id="needs-display">Đang đợi...</div>
+    <div class="excitement-label">Thanh Hưng Phấn</div>
+    <div class="progress-bar"><div id="fill"></div></div>
+    <div class="gift-actions">
+        <button class="gift-btn" onclick="give('🍑')">🍑</button>
+        <button class="gift-btn" onclick="give('🧸')">🧸</button>
+        <button class="gift-btn" onclick="give('🧧')">🧧</button>
+        <button class="gift-btn" onclick="give('🌸')">🌸</button>
+        <button class="gift-btn" onclick="give('🫔')">🫔</button>
+        <button class="gift-btn" onclick="give('❤️')">❤️</button>
+        <button class="gift-btn" onclick="give('🃏')">🃏</button>
+        <button class="gift-btn" onclick="give('🎆')">🎆</button>
+        <button class="gift-btn" onclick="give('🍎')">🍎</button>
+    </div>
+</div>
+
+<div id="res-modal" class="overlay">
+    <div class="scroll" id="scroll-box">
+        <h3 id="scroll-title" style="margin: 0; color: #b30000; font-size: 1.5rem;">📜 DI CHIẾU 📜</h3>
+        <h1 id="r-han" style="color:var(--do); margin:10px 0; font-size: 50px;"></h1>
+        <h2 id="r-title" style="margin:0; font-family:'Dancing Script'; color: #8b4513;"></h2>
+        <hr id="scroll-hr" style="border: 1px dashed #d4af37;">
+        <p id="r-wish"></p>
+        <p id="hy-count-info" style="font-size: 0.9rem; color: #b30000; font-weight: bold;"></p>
+        <button class="btn-close" onclick="closeRes()">Lãnh Chỉ & Nhận Lộc!</button>
+    </div>
+</div>s
