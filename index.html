@@ -1,117 +1,23 @@
-:root { 
-    --do: #b30000; 
-    --vang: #ffd700; 
-    --nen-tet: url('https://www.transparenttextures.com/patterns/oriental-tiles.png');
-    --canh-dao: url('https://png.pngtree.com/png-vector/20221213/ourmid/pngtree-cherry-blossom-flowers-branch-vector-png-image_6521575.png');
-    --nen-game: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lì Xì Đại Cát 2026</title>
 
-body {
-    margin: 0; 
-    background: #8a0d0d var(--nen-tet);
-    background-color: #ce1f1f;
-    font-family: 'Patrick Hand', cursive; color: white;
-    display: flex; flex-direction: column; align-items: center; overflow: hidden; height: 100vh;
-    position: relative;
-}
+    <!-- CSS (đường dẫn tương đối - QUAN TRỌNG) -->
+    <link rel="stylesheet" href="./bach.css">
+</head>
 
-body::before {
-    content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: var(--canh-dao); background-repeat: no-repeat;
-    background-size: 400px; background-position: top right;
-    opacity: 0.6; pointer-events: none; z-index: 1;
-}
+<body>
 
-h1 { font-family: 'Dancing Script'; font-size: 2.3rem; color: var(--vang); margin: 15px 0 5px; text-shadow: 2px 2px #000; text-align: center; z-index: 10; }
-
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 10px; z-index: 10; }
-.lixi {
-    width: 95px; height: 135px; background: linear-gradient(145deg, #b30000, #ff0000); 
-    border: 3px solid var(--vang); border-radius: 12px; display: flex; flex-direction: column; 
-    align-items: center; justify-content: center; cursor: pointer; transition: 0.3s; 
-    box-shadow: 0 8px 15px rgba(0,0,0,0.5); position: relative;
-}
-.lixi:active { transform: scale(0.9) rotate(5deg); }
-.han { font-family: 'Noto Serif TC'; font-size: 35px; color: var(--vang); text-shadow: 1px 1px 2px #000; }
-.viet { font-size: 15px; color: #fff; font-weight: bold; }
-
-.overlay { 
-    position: fixed; inset: 0; 
-    background: rgba(138, 13, 13, 0.98) var(--nen-tet);
-    display: none; flex-direction: column; align-items: center; justify-content: center; 
-    z-index: 100; animation: fadeIn 0.3s; 
-}
-
-#game-modal { background: #8a0d0d var(--nen-game); }
-
-.char-box { 
-    font-size: 80px; width: 160px; height: 160px; background: #fff; 
-    border-radius: 50%; display: flex; flex-direction: column; align-items: center; 
-    justify-content: center; border: 5px solid var(--vang); margin-bottom: 10px; 
-    box-shadow: 0 0 25px var(--vang); position: relative; 
-}
-.char-name { font-size: 1.2rem; color: var(--do); font-weight: bold; position: absolute; bottom: 10px; }
-
-.needs-list { font-size: 1.5rem; margin-bottom: 5px; background: rgba(0,0,0,0.3); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--vang); }
-
-.excitement-label { font-size: 1rem; color: var(--vang); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
-.progress-bar { width: 260px; height: 25px; background: #222; border-radius: 20px; border: 3px solid var(--vang); overflow: hidden; margin-bottom: 15px; box-shadow: inset 0 0 10px #000; }
-#fill { 
-    width: 0%; height: 100%; 
-    background: linear-gradient(90deg, #ff0000, #ffde59, #00ff00, #ff00ff, #ff0000); 
-    background-size: 200% 100%;
-    animation: moveGradient 2s linear infinite;
-    transition: width 0.4s ease;
-}
-@keyframes moveGradient { 0% { background-position: 0% 0%; } 100% { background-position: 200% 0%; } }
-
-.gift-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.gift-btn { 
-    padding: 10px; background: #fff; border-radius: 15px; border: 2px solid var(--vang); 
-    font-size: 2rem; cursor: pointer; box-shadow: 0 4px 0 #b38f00; transition: 0.1s;
-}
-.gift-btn:active { transform: translateY(2px); box-shadow: none; }
-
-.scroll { 
-    background: #fdf5e6; 
-    background-image: linear-gradient(to right, #d4af37 2%, transparent 5%, transparent 95%, #d4af37 98%);
-    color: #333; padding: 40px 30px; border: 4px solid #d4af37; border-radius: 5px; 
-    text-align: center; width: 80%; max-width: 400px; box-shadow: 0 0 30px rgba(0,0,0,0.7);
-    position: relative; transition: 0.5s;
-}
-.scroll::before, .scroll::after {
-    content: ""; position: absolute; height: 110%; width: 20px; 
-    background: #8b4513; top: -5%; border-radius: 5px; border: 2px solid #d4af37;
-}
-.scroll::before { left: -10px; }
-.scroll::after { right: -10px; }
-
-.scroll.thanh-chi {
-    background: #ffd700; 
-    background-image: linear-gradient(to right, #b38f00 2%, transparent 5%, transparent 95%, #b38f00 98%);
-    border-color: #b38f00;
-}
-.scroll.thanh-chi h3 { color: #b30000 !important; font-weight: 900; }
-
-#r-wish { font-family: 'Noto Serif TC'; font-size: 1.1rem; line-height: 1.8; text-align: center; }
-.btn-close { margin-top: 20px; padding: 12px 25px; background: var(--do); color: white; border: 2px solid var(--vang); border-radius: 8px; cursor: pointer; font-family: 'Patrick Hand'; font-size: 1.1rem; }
-
-.burst-icon {
-    position: fixed; pointer-events: none; font-size: 2.5rem; z-index: 1000;
-    animation: burst 3s forwards cubic-bezier(0.1, 0.5, 0.3, 1);
-}
-@keyframes burst {
-    0% { transform: translate(0, 0) scale(0.5) rotate(0deg); opacity: 1; }
-    100% { transform: translate(var(--tx), var(--ty)) scale(1.5) rotate(720deg); opacity: 0; }
-}
-
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-
-
-
-
-<h1>🏮 Xuân Bính Ngọ 2026 🏮<br><span style="color: var(--vang); font-size: 1.5rem;">Lì Xì Đại Cát</span></h1>
+<h1>
+    🏮 Xuân Bính Ngọ 2026 🏮
+    <br>
+    <span style="color: var(--vang); font-size: 1.5rem;">
+        Lì Xì Đại Cát
+    </span>
+</h1>
 
 <div class="grid">
     <div class="lixi" onclick="openGame(0)"><span class="han">福</span><span class="viet">Phúc</span></div>
@@ -133,7 +39,10 @@ h1 { font-family: 'Dancing Script'; font-size: 2.3rem; color: var(--vang); margi
     </div>
     <div class="needs-list" id="needs-display">Đang đợi...</div>
     <div class="excitement-label">Thanh Hưng Phấn</div>
-    <div class="progress-bar"><div id="fill"></div></div>
+    <div class="progress-bar">
+        <div id="fill"></div>
+    </div>
+
     <div class="gift-actions">
         <button class="gift-btn" onclick="give('🍑')">🍑</button>
         <button class="gift-btn" onclick="give('🧸')">🧸</button>
@@ -149,7 +58,9 @@ h1 { font-family: 'Dancing Script'; font-size: 2.3rem; color: var(--vang); margi
 
 <div id="res-modal" class="overlay">
     <div class="scroll" id="scroll-box">
-        <h3 id="scroll-title" style="margin: 0; color: #b30000; font-size: 1.5rem;">📜 DI CHIẾU 📜</h3>
+        <h3 id="scroll-title" style="margin: 0; color: #b30000; font-size: 1.5rem;">
+            📜 DI CHIẾU 📜
+        </h3>
         <h1 id="r-han" style="color:var(--do); margin:10px 0; font-size: 50px;"></h1>
         <h2 id="r-title" style="margin:0; font-family:'Dancing Script'; color: #8b4513;"></h2>
         <hr id="scroll-hr" style="border: 1px dashed #d4af37;">
@@ -157,5 +68,10 @@ h1 { font-family: 'Dancing Script'; font-size: 2.3rem; color: var(--vang); margi
         <p id="hy-count-info" style="font-size: 0.9rem; color: #b30000; font-weight: bold;"></p>
         <button class="btn-close" onclick="closeRes()">Lãnh Chỉ & Nhận Lộc!</button>
     </div>
-</div>s
+</div>
 
+<!-- JS đặt cuối body để đảm bảo load đúng -->
+<script src="./bach.js"></script>
+
+</body>
+</html>
